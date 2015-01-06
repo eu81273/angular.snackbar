@@ -5,7 +5,7 @@ Pure [AngularJS](http://www.angularjs.org) based Snackbar Component.
 (css based on https://github.com/FezVrasta/snackbarjs)
 
 
-## Examples
+## Example
 
 [jsFiddle - http://jsfiddle.net/eu81273/wtfdzehr/](http://jsfiddle.net/eu81273/wtfdzehr/)
 
