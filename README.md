@@ -28,6 +28,12 @@ And add snackbar container tag to your application.
 
 This is all.
 
+some attributes of angular snackbar are below.
+
+- snackbar: snackbar directive.
+- snackbar-duration : snackbar duration time (ms).
+- snackbar-remove-delay : delay time to remove from DOM after hide (ms).
+
 
 ## Create snackbar
 
@@ -39,7 +45,11 @@ var app = angular.module('angularApplication', ['angular.snackbar']);
 
 app.controller('defaultController', function($scope, snackbar) {
 
+	//create snackbar with default duration(3000ms)
 	snackbar.create("Hello World!!");
+	
+	//create snackbar with custom duration
+	snackbar.create("This is snackbar!!", 5000);
 
 });
 
