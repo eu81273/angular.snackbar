@@ -2,7 +2,7 @@ Angular Snackbar
 ================
 
 Pure [AngularJS](http://www.angularjs.org) based Snackbar Component.
-
+(css based on https://github.com/FezVrasta/snackbarjs)
 
 
 ## Installation
