@@ -5,6 +5,14 @@ Pure [AngularJS](http://www.angularjs.org) based Snackbar Component.
 (css based on https://github.com/FezVrasta/snackbarjs)
 
 
+## Examples
+
+#### Basic example
+
+[jsFiddle - http://jsfiddle.net/eu81273/wtfdzehr/](http://jsfiddle.net/eu81273/wtfdzehr/)
+
+
+
 ## Installation
 
 Copy the script and css into your project and add a script and link tag to your page.
@@ -54,13 +62,6 @@ app.controller('defaultController', function($scope, snackbar) {
 });
 
 ```
-
-## Examples
-
-#### Basic example
-
-[jsFiddle - http://jsfiddle.net/eu81273/wtfdzehr/](http://jsfiddle.net/eu81273/wtfdzehr/)
-
 
 ## Browser Compatibility
 
