@@ -7,9 +7,8 @@ Pure [AngularJS](http://www.angularjs.org) based Snackbar Component.
 
 ## Examples
 
-#### Basic example
-
 [jsFiddle - http://jsfiddle.net/eu81273/wtfdzehr/](http://jsfiddle.net/eu81273/wtfdzehr/)
+
 
 
 
