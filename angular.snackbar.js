@@ -53,10 +53,10 @@
 					//hide snackbar
 					return angular.element(snackbar).removeClass("snackbar-opened");
 
-				}, received.timeout || snackbarDuration, false).then(function (element) {
+				}, received.timeout || snackbarDuration).then(function (element) {
 
 					//remove snackbar
-					$timeout( function () { element.remove(); }, snackbarRemoveDelay, false);
+					$timeout( function () { element.remove(); }, snackbarRemoveDelay);
 				});
 			
 			});
