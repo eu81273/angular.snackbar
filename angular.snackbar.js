@@ -1,5 +1,5 @@
 /*
-	@license Angular Snackbar version 1.0.0
+	@license Angular Snackbar version 1.0.1
 	ⓒ 2015 AHN JAE-HA http://github.com/eu81273/angular.snackbar
 	License: MIT
 
@@ -15,9 +15,9 @@
 	module.factory("snackbar", ['$rootScope', function ($rootScope) {
 
 		return {
-			create : function ( message, timeout ) { 
+			create : function ( content, duration ) { 
 
-				$rootScope.$broadcast('createSnackbar', { 'message': message, 'timeout': timeout });
+				$rootScope.$broadcast('createSnackbar', { 'content': content, 'duration': duration });
 			}
 		}
 	}]);
@@ -25,39 +25,41 @@
 	//snackbar directive
 	module.directive( "snackbar", ["$rootScope", "$compile", "$timeout", function($rootScope, $compile, $timeout) {
 
-		//snackbar duration time (ms)
-		var snackbarDuration = 3000;
-
-		//delay time to remove from DOM after hide (ms)
-		var snackbarRemoveDelay = 200;
-
 		return function ( scope, element, attrs ) {
 
-			//initialize
-			snackbarDuration = attrs.snackbarDuration || 3000;
-			snackbarRemoveDelay = attrs.snackbarRemoveDelay || 200;
+			//snackbar container
+			var snackbarContainer = angular.element(element);
 
+			//snackbar duration time (ms)
+			var snackbarDuration = attrs.snackbarDuration || 3000;
+
+			//delay time to remove from DOM after hide (ms)
+			var snackbarRemoveDelay = attrs.snackbarRemoveDelay || 200;
+
+
+			//receive broadcating
 			$rootScope.$on('createSnackbar', function(event, received) {
 
 				//snackbar template
-				var template = "<div class=\"snackbar snackbar-opened\"><span class=\"snackbar-content\">" + received.message + "</span></div>";
+				var template = "<div class=\"snackbar snackbar-opened\"><span class=\"snackbar-content\">" + received.content + "</span></div>";
 
 				//template compile
-				var snackbar = $compile(template)(scope);
+				var snackbar = angular.element($compile(template)(scope));
 
 				//add snackbar
-				angular.element(element).append(snackbar);
+				snackbarContainer.append(snackbar);
 
-        //snackbar duration timeout
-				var $snackbar = angular.element(snackbar);
+				//snackbar duration time
 				$timeout(function () {
+
 					//hide snackbar
-					$snackbar.removeClass("snackbar-opened");
+					snackbar.removeClass("snackbar-opened");
 
 					//remove snackbar
-					$timeout( function () { $snackbar.remove(); }, snackbarRemoveDelay, false);
-        }, received.timeout || snackbarDuration, false);
-			
+					$timeout(function () { snackbar.remove(); }, snackbarRemoveDelay, false);
+
+				}, received.duration || snackbarDuration, false);
+
 			});
 		};
 	}]);
