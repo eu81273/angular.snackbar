@@ -48,16 +48,15 @@
 				//add snackbar
 				angular.element(element).append(snackbar);
 
-				//snackbar duration timeout
+        //snackbar duration timeout
+				var $snackbar = angular.element(snackbar);
 				$timeout(function () {
 					//hide snackbar
-					return angular.element(snackbar).removeClass("snackbar-opened");
-
-				}, received.timeout || snackbarDuration).then(function (element) {
+					$snackbar.removeClass("snackbar-opened");
 
 					//remove snackbar
-					$timeout( function () { element.remove(); }, snackbarRemoveDelay);
-				});
+					$timeout( function () { $snackbar.remove(); }, snackbarRemoveDelay, false);
+        }, received.timeout || snackbarDuration, false);
 			
 			});
 		};
