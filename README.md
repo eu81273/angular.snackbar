@@ -8,7 +8,7 @@ Forked from [eu81273/angular.snackbar.js](https://github.com/eu81273/angular.sna
 
 ## Example
 
-[jsFiddle - http://jsfiddle.net/eu81273/wtfdzehr/](http://jsfiddle.net/rockwotj/1h0rctcy/)
+[jsFiddle - http://jsfiddle.net/rockwotj/1h0rctcy/](http://jsfiddle.net/rockwotj/1h0rctcy/)
 
 
 
