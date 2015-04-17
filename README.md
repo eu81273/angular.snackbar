@@ -4,10 +4,11 @@ Angular Snackbar
 Pure [AngularJS](http://www.angularjs.org) based Snackbar Component.
 (css based on https://github.com/FezVrasta/snackbarjs)
 
+Forked from [eu81273/angular.snackbar.js](https://github.com/eu81273/angular.snackbar)
 
 ## Example
 
-[jsFiddle - http://jsfiddle.net/eu81273/wtfdzehr/](http://jsfiddle.net/eu81273/wtfdzehr/)
+[jsFiddle - http://jsfiddle.net/eu81273/wtfdzehr/](http://jsfiddle.net/rockwotj/1h0rctcy/)
 
 
 
@@ -35,16 +36,9 @@ And add snackbar container tag to your application.
 
 This is all.
 
-some attributes of angular snackbar are below.
-
-- snackbar: snackbar directive.
-- snackbar-duration : snackbar duration time (ms).
-- snackbar-remove-delay : delay time to remove from DOM after hide (ms).
-
-
 ## Create snackbar
 
-Creating snackbar also very simple. Inject snackbar service to your app then call the service method like below.
+Creating a snackbar is also very simple. Inject snackbar service to your app then call the service method like below.
 
 
 ```javascript
@@ -52,21 +46,26 @@ var app = angular.module('angularApplication', ['angular.snackbar']);
 
 app.controller('defaultController', function($scope, snackbar) {
 
-	//create snackbar with default duration(3000ms)
-	snackbar.create("Hello World!!");
-	
-	//create snackbar with custom duration
-	snackbar.create("This is snackbar!!", 5000);
+	//create snackbar with an id of 1
+	snackbar.create("Hello World!!", 1);
 
+	//remove snackbar with id 1
+	snackbar.remove(1);
+
+	//create snackbar with a duration
+snackbar.createWithTimeout("Hello World!!");
 });
 
 ```
 
 ## Browser Compatibility
 
-Report me please. I just tested on Chrome 39.0.2171.95 m.
+Report me please. I just tested on Chrome.
 
 ## Changelogs
+
+#### version 1.1.0
+- Added the ability to manually toggle the snackbar
 
 #### version 1.0.1
 - Reduce extra digest loops when hide (Thanks to codef0rmer)
@@ -78,6 +77,6 @@ Report me please. I just tested on Chrome 39.0.2171.95 m.
 
 The MIT License.
 
-Copyright ⓒ 2015 AHN JAE-HA.
+Copyright ⓒ 2015 Tyler Rockwood.
 
-See [LICENSE](https://github.com/eu81273/angular.snackbar/blob/master/LICENSE)
+See [LICENSE](https://github.com/rockwotj/angular.snackbar/blob/master/LICENSE)
