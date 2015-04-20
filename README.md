@@ -53,7 +53,7 @@ app.controller('defaultController', function($scope, snackbar) {
 	snackbar.remove(1);
 
 	//create snackbar with a duration
-snackbar.createWithTimeout("Hello World!!");
+	snackbar.createWithTimeout("Hello World!!");
 });
 
 ```
