@@ -4,7 +4,7 @@
   "description": "Pure AngularJS based Snackbar Component",
   "main":[
   	"./angular.snackbar.js",
-  	"./css/angular.snackbar.css",
+  	"./css/angular.snackbar.css"
   ],
   "repository": {
     "type": "git",
