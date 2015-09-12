@@ -1,0 +1,23 @@
+{
+  "name": "angular.snackbar",
+  "version": "1.0.1",
+  "description": "Pure AngularJS based Snackbar Component",
+  "main":[
+  	"./angular.snackbar.js",
+  	"./css/angular.snackbar.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eu81273/angular.snackbar.git"
+  },
+  "keywords": [
+    "angular.js",
+    "AngularJS",
+    "snackbar"
+  ],
+  "authors": [
+  	"AHN JAE-HA"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/eu81273/angular.snackbar"
+}
