@@ -1,6 +1,6 @@
 {
   "name": "angular.snackbar",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Pure AngularJS based Snackbar Component",
   "main": "angular.snackbar.js",
   "scripts": {
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eu81273/angular.snackbar.git"
+    "url": "https://github.com/rockwotj/angular.snackbar"
   },
   "keywords": [
     "angular.js",
     "AngularJS",
     "snackbar"
   ],
-  "author": "AHN JAE-HA",
+  "author": "Tyler Rockwood",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eu81273/angular.snackbar/issues"
+    "url": "https://github.com/rockwotj/angular.snackbar/issues"
   },
-  "homepage": "https://github.com/eu81273/angular.snackbar"
+  "homepage": "https://github.com/rockwotj/angular.snackbar"
 }
